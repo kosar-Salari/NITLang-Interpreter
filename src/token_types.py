@@ -9,22 +9,34 @@ class TokenType(Enum):
     IF = "IF"
     THEN = "THEN"
     ELSE = "ELSE"
-    LET = "LET"  
-    IN = "IN"  
+    LET = "LET"
+    IN = "IN"
 
     PLUS = "PLUS"
     MINUS = "MINUS"
     MULTIPLY = "MULTIPLY"
     DIVIDE = "DIVIDE"
-    EQUALS = "EQUALS"  
-    ASSIGN = "ASSIGN"  
+    EQUALS = "EQUALS"
+    ASSIGN = "ASSIGN"
 
-    LPAREN = "LPAREN"  
-    RPAREN = "RPAREN"  
-    COMMA = "COMMA"  
-    HASH = "HASH" 
-    LBRACE = "LBRACE"  
-    RBRACE = "RBRACE" 
+    LPAREN = "LPAREN"
+    RPAREN = "RPAREN"
+    COMMA = "COMMA"
+    HASH = "HASH"
+    LBRACE = "LBRACE"
+    RBRACE = "RBRACE"
+
+    COLON_ASSIGN = "COLON_ASSIGN"  # :=
+    REF = "REF"                    # ref
+    DEREF = "DEREF"                # #
+
+    COLON = "COLON"                # :
+    STRING = "STRING"              # "foo"
+    BOOL = "BOOL"                  # true / false
+
+    CLASS = "CLASS"                # class
+    NEW = "NEW"                    # new
+    DOT = "DOT"                    # .
 
     EOF = "EOF"
 
@@ -44,6 +56,13 @@ KEYWORDS = {
     'if': TokenType.IF,
     'then': TokenType.THEN,
     'else': TokenType.ELSE,
-    'let': TokenType.LET,  
-    'in': TokenType.IN,  
+    'let': TokenType.LET,
+    'in': TokenType.IN,
+    'ref': TokenType.REF,
+
+    'true': TokenType.BOOL,
+    'false': TokenType.BOOL,
+
+    'class': TokenType.CLASS,
+    'new': TokenType.NEW,
 }
